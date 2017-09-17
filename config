@@ -160,5 +160,4 @@ bar {
 
 exec --no-startup-id xcompmgr -n &
 exec --no-startup-id variety &
-exec --no-startup-id cbatticon &
 exec --no-startup-id nm-applet &
