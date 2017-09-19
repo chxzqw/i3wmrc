@@ -68,7 +68,7 @@ if ($percent < 20) {
 	$color = "#A8FF00";
 } else {
 	$full_text = ' ';
-	$color = "#008000";
+	$color = "#00FF00";
 }
 
 if ($status eq 'Discharging') {
@@ -82,10 +82,11 @@ if ($status eq 'Discharging') {
 
 $full_text .= " $percent%/$life%";
 
-# not sure what's this
-if ($acpi =~ /(\d\d:\d\d):/) {
+# remain time part
+if (($status eq 'Discharging') && ($acpi =~ /(\d\d:\d\d:\d\d)/)) {
 	$full_text .= " ($1)";
 }
+
 
 $short_text = $full_text;
 
