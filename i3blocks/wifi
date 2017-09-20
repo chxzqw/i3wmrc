@@ -44,3 +44,7 @@ elif [[ $QUALITY -lt 60 ]]; then
 elif [[ $QUALITY -lt 40 ]]; then
     echo "#FF0000"
 fi
+
+case $BLOCK_BUTTON in
+  3) nm-applet ;;  # right click, mute/unmute
+esac
