@@ -169,3 +169,4 @@ assign [class="Code"] 3
 exec --no-startup-id xcompmgr -n &
 exec --no-startup-id variety &
 exec --no-startup-id nm-applet &
+exec --no-startup-id menutray -i
