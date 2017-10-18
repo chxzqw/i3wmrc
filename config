@@ -159,12 +159,13 @@ bar {
 	tray_output LVDS-1
 }
 
-#Assign all browsers to workspace 2
+# Assign all browsers to workspace 2
+assign [class="URxvt"] 1
 assign [class="Firefox"] 2
 assign [class="firefox-developer"] 2
 assign [class="Google-chrome"] 2
 
-#Assign GUI editor/IDE stuff to workspace 3
+# Assign GUI editor/IDE stuff to workspace 3
 assign [class="Code"] 3
 
 exec --no-startup-id xcompmgr -n &
@@ -172,4 +173,5 @@ exec --no-startup-id variety &
 exec --no-startup-id nm-applet &
 exec --no-startup-id menutray -i
 exec --no-startup-id dropbox
+# color temperature setting tool
 exec --no-startup-id redshift-gtk
