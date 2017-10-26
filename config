@@ -175,5 +175,5 @@ exec --no-startup-id menutray -i
 exec --no-startup-id dropbox
 # color temperature setting tool
 exec --no-startup-id redshift-gtk
-# mirror screen to hdmi, not using 2 monitors
-exec --no-startup-id ~/scripts/watch-stream-on-hdmi.sh
+# output audio to HDMI, video has already been transfered to HDMI by lightdm configurations.
+exec --no-startup-id /usr/local/bin/output-audio-to-hdmi.sh
