@@ -175,3 +175,5 @@ exec --no-startup-id menutray -i
 exec --no-startup-id dropbox
 # color temperature setting tool
 exec --no-startup-id redshift-gtk
+# mirror screen to hdmi, not using 2 monitors
+exec --no-startup-id ~/scripts/watch-stream-on-hdmi.sh
