@@ -170,6 +170,9 @@ assign [class="Code"] 3
 assign [class="qBittorrent"] 7
 assign [class="Vlc"] 8
 
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Right workspace next
+
 exec --no-startup-id xcompmgr -n &
 exec --no-startup-id variety &
 exec --no-startup-id nm-applet &
