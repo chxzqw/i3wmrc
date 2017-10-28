@@ -167,6 +167,8 @@ assign [class="Google-chrome"] 2
 
 # Assign GUI editor/IDE stuff to workspace 3
 assign [class="Code"] 3
+assign [class="qBittorrent"] 7
+assign [class="Vlc"] 8
 
 exec --no-startup-id xcompmgr -n &
 exec --no-startup-id variety &
@@ -177,3 +179,4 @@ exec --no-startup-id dropbox
 exec --no-startup-id redshift-gtk
 # output audio to HDMI, video has already been transfered to HDMI by lightdm configurations.
 exec --no-startup-id /usr/local/bin/output-audio-to-hdmi.sh
+exec --no-startup-id udiskie --automount --notify --tray
