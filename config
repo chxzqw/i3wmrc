@@ -153,10 +153,11 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
+	#i3bar_command i3bar
         #status_command i3status --config ~/.config/i3/i3status.conf
         status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
-	#i3bar_command i3bar
-	tray_output LVDS-1
+# show tray icons on the primary monitor which might be LVDS-1 if in case of laptop 
+	tray_output primary
 }
 
 # Assign all browsers to workspace 2
