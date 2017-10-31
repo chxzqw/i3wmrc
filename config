@@ -169,6 +169,7 @@ assign [class="Google-chrome"] 2
 # Assign GUI editor/IDE stuff to workspace 3
 assign [class="Code"] 3
 assign [class="qBittorrent"] 7
+assign [class="WebTorrent"] 7
 assign [class="Vlc"] 8
 
 bindsym $mod+Control+Left workspace prev
