@@ -1,0 +1,68 @@
+#!/usr/bin/perl
+#
+# Copyright 2014 Pierre Mavro <deimos@deimos.fr>
+# Copyright 2014 Vivien Didelot <vivien@didelot.org>
+# Copyright 2017 Sid Chen <chxzqw@gmail.com>
+#
+# Licensed under the terms of the GNU GPL v3, or any later version.
+#
+# This script is meant to use with i3blocks. It parses the output of the "acpi"
+# command (often provided by a package of the same name) to read the status of
+#
+# The color will gradually change for a percentage below 85%, and the urgency
+
+use strict;
+use warnings;
+use utf8;
+
+my $acpi;
+my $full_text;
+my $short_text;
+my $bat_number = $ENV{BLOCK_INSTANCE} || 0;
+my $bat_details;
+my $life;
+my $color;
+
+# read the first line of the "acpi" command output
+open (ACPI, "acpi -i | grep 'Battery $bat_number' |") or die;
+$acpi = <ACPI>;
+$bat_details = <ACPI>;
+close(ACPI);
+
+# AC only, no batery on
+if ($bat_details eq '') {
+	print "---\n";
+	print "---\n";
+	print "#FFFFFF\n";
+	exit(0);
+}
+
+if ($bat_details !~ /= (\d+)%/) {
+	die "$bat_details\n";
+}
+
+$life = $1;
+
+if ($life < 20) {
+	$color = "#FF0000";
+} elsif ($life < 40) {
+	$color = "#FFAE00";
+} elsif ($life < 60) {
+	$color = "#FFF600";
+} elsif ($life < 85) {
+	$color = "#A8FF00";
+} else {
+	$color = "#00FF00";
+}
+
+$full_text = "$life%";
+
+$short_text = $full_text;
+
+# print text
+print "$full_text\n";
+print "$short_text\n";
+# print color
+print "$color\n";
+
+exit(0);
