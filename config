@@ -178,9 +178,9 @@ bindsym $mod+Control+Right workspace next
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
-exec --no-startup-id xcompmgr -n &
-exec --no-startup-id variety &
-exec --no-startup-id nm-applet &
+exec --no-startup-id xcompmgr -n
+exec --no-startup-id variety
+exec --no-startup-id nm-applet
 exec --no-startup-id menutray -i
 exec --no-startup-id dropbox
 # color temperature setting tool
