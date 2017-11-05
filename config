@@ -187,3 +187,4 @@ exec --no-startup-id dropbox
 exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --automount --notify --tray
 exec --no-startup-id cbatticon
+exec --no-startup-id volumeicon
