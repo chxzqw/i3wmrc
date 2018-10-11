@@ -159,10 +159,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
-	#i3bar_command i3bar
+	#i3bar_command i3bar -t
         #status_command i3status --config ~/.config/i3/i3status.conf
         status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf
-        # show tray icons on the primary monitor which might be LVDS-1 if in case of laptop 
+        ## show tray icons on the primary monitor which might be LVDS-1 if in case of laptop 
 	tray_output primary
 }
 
@@ -189,9 +189,10 @@ exec --no-startup-id variety
 exec --no-startup-id nm-applet
 exec --no-startup-id menutray -i
 exec --no-startup-id dropbox
-# color temperature setting tool
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --automount --notify --tray
 exec --no-startup-id cbatticon
 exec --no-startup-id volumeicon
+
+## color temperature setting tool
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+exec --no-startup-id redshift-gtk
