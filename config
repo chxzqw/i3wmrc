@@ -190,6 +190,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id menutray -i
 exec --no-startup-id dropbox
 # color temperature setting tool
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --automount --notify --tray
 exec --no-startup-id cbatticon
