@@ -170,7 +170,7 @@ bar {
 assign [class="URxvt"] 1
 assign [class="Firefox"] 2
 assign [class="firefox-developer"] 2
-assign [class="Google-chrome"] 2
+assign [class="Chromium"] 2
 
 # Assign GUI editor/IDE stuff to workspace 3
 assign [class="Code"] 3
