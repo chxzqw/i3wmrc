@@ -166,13 +166,13 @@ bar {
 	tray_output primary
 }
 
-# Assign all browsers to workspace 2
+## Assign all browsers to workspace 2
 assign [class="URxvt"] 1
 assign [class="Firefox"] 2
 assign [class="firefox-developer"] 2
 assign [class="Chromium"] 2
 
-# Assign GUI editor/IDE stuff to workspace 3
+## Assign GUI editor/IDE stuff to workspace 3
 assign [class="Code"] 3
 assign [class="qBittorrent"] 7
 assign [class="WebTorrent"] 7
@@ -186,8 +186,9 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 exec --no-startup-id xcompmgr -n
 exec --no-startup-id variety
-exec --no-startup-id nm-applet
-exec --no-startup-id menutray -i
+# exec --no-startup-id nm-applet
+exec --no-startup-id wicd-client --tray
+exec --no-startup-id menutray -g
 exec --no-startup-id dropbox
 exec --no-startup-id udiskie --automount --notify --tray
 exec --no-startup-id cbatticon
